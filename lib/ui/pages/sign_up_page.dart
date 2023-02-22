@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bonus_page.dart';
 import '../../shared/theme.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -172,7 +173,9 @@ class SignUpPage extends StatelessWidget {
           width: double.infinity,
           height: 55,
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/bonus');
+            },
             style: TextButton.styleFrom(
               backgroundColor: kPrimaryColor,
               shape: RoundedRectangleBorder(
