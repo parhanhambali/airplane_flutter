@@ -4,7 +4,7 @@ import 'ui/pages/main_page.dart';
 import 'ui/pages/sign_up_page.dart';
 import 'ui/pages/splash_page.dart';
 import 'ui/pages/bonus_page.dart';
-import 'ui/pages/bonus_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
