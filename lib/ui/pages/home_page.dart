@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
+import '../widgets/destination_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -57,9 +58,41 @@ class HomePage extends StatelessWidget {
       );
     }
     
+    Widget popularDestination() {
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              DestinationCard(
+                name: 'Lake Ciliwung',
+                city: 'Tangerang',
+                imageUrl: 'assets/image_destination1.png',
+                rating: 5,
+              ),
+              DestinationCard(
+                name: 'White House',
+                city: 'Spain',
+                imageUrl: 'assets/image_destination2.png',
+                rating: 4.5,
+              ),
+              DestinationCard(
+                name: 'Pangalengan',
+                city: 'Bandung',
+                imageUrl: 'assets/image_destination3.png',
+                rating: 5,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
+        popularDestination(),
       ],
     );
   }
