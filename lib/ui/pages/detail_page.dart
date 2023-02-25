@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
+import '../widgets/interest_item.dart';
 import '../widgets/photo_item.dart';
 
 class DetailPage extends StatelessWidget {
@@ -175,7 +176,44 @@ class DetailPage extends StatelessWidget {
                         imageUrl: 'assets/image_photo3.png',
                       ),
                     ],
-                  )
+                  ),
+                  // Note : Interest
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Interest',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Row(
+                    children: [
+                      InterestItem(
+                        text: 'Kids Park',
+                      ),
+                      InterestItem(
+                        text: 'Honor Bridge'
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      InterestItem(
+                        text: 'City Museum',
+                      ),
+                      InterestItem(
+                        text: 'Central Mall'
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -186,12 +224,14 @@ class DetailPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(
-        children: [
-          backgroundImage(),
-          customShadow(),
-          content(),
-        ],
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            backgroundImage(),
+            customShadow(),
+            content(),
+          ],
+        ),
       ),
     );
   }
