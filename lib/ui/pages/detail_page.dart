@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
+import '../widgets/photo_item.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -109,6 +110,69 @@ class DetailPage extends StatelessWidget {
                         style: whiteTextStyle.copyWith(
                           fontWeight: medium,
                         ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          
+            // Note : Description
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 20,
+              ),
+              decoration: BoxDecoration(
+                color: kWhiteColor,
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Note : About
+                  Text(
+                    'About',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    'Berada dijalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan kebun raya Eka karya menjadikan tempat Bali.',
+                    style: blackTextStyle.copyWith(
+                      height: 2,
+                    ),
+                  ),
+                  // Note : Photos
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Photos',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Row(
+                    children: [
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo1.png',
+                      ),
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo2.png',
+                      ),
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo3.png',
                       ),
                     ],
                   )
