@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
+import '../widgets/custom_button.dart';
 import '../widgets/interest_item.dart';
 import '../widgets/photo_item.dart';
 
@@ -213,6 +214,47 @@ class DetailPage extends StatelessWidget {
                         text: 'Central Mall'
                       ),
                     ],
+                  ),
+                ],
+              ),
+            ),
+            // Note : Price and Book Button
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(
+                vertical: 30,
+              ),
+              child: Row(
+                children: [
+                  // Note : Price
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'IDR 2.800.000',
+                          style: blackTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: medium,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'per orang',
+                          style: greyTextStyle.copyWith(
+                            fontWeight: light,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Note : Book Button
+                  CustomButton(
+                    title: 'Book Now',
+                    onPressd: () {},
+                    width: 170,
                   ),
                 ],
               ),
