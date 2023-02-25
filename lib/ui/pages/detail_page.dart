@@ -3,6 +3,7 @@ import '../../shared/theme.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/interest_item.dart';
 import '../widgets/photo_item.dart';
+import 'choose_seat_page.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -253,7 +254,13 @@ class DetailPage extends StatelessWidget {
                   // Note : Book Button
                   CustomButton(
                     title: 'Book Now',
-                    onPressd: () {},
+                    onPressd: () {
+                      Navigator.push(
+                        context, MaterialPageRoute(
+                          builder: (context) => ChooseSeatPage(),
+                        ),
+                      );
+                    },
                     width: 170,
                   ),
                 ],
