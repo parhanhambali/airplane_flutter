@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/seat_item.dart';
+import 'checkout_page.dart';
 
 class ChooseSeatPage extends StatelessWidget {
   const ChooseSeatPage({Key? key}) : super(key: key);
@@ -342,7 +343,12 @@ class ChooseSeatPage extends StatelessWidget {
       return CustomButton(
         title: 'Countinue to Checkout', 
         onPressd: () {
-          
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CheckoutPage(),
+            )
+          );
         },
         margin: EdgeInsets.only(
           top: 30,
