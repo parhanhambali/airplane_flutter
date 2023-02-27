@@ -32,8 +32,7 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CustomBottomNavigationItem(
-                imageUrl: 'assets/icon_home.png',
-                isSelected: true,
+                imageUrl: 'assets/icon_home.png',isSelected: true,
               ),
               CustomBottomNavigationItem(
                 imageUrl: 'assets/icon_booking.png',
